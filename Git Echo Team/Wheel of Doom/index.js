@@ -1,6 +1,6 @@
 "use strict";
 
-let listaCoders = [];
+let listaCoders = ["Laura", "Vanessa", "Quim", "Isma", "Ale", "Moi", "René"];
 
 
 const addButton = document.querySelector("#addButton");
@@ -12,23 +12,12 @@ function addCoder() {
   listaCoders.push(newCoder);
   console.log(newCoder);
   agregarParticipante(newCoder);
-  deleteButton();
-}
-
-
-function offCoder(coder) {
-  listaCoders.splice(listaCoders.indexOf(coder), 1);
-
-}
-function deleteButton (coder){
-  let deleteCoder = document.querySelector(".deleteCoder");
-  deleteCoder.addEventListener("click", offCoder)
 }
 
 function agregarParticipante(coder) {
   const article = document.querySelector("#coderList");
 
-const newCoder = 
+  const newCoder = 
       article.innerHTML +=
         `
                 <article id="` +
@@ -41,50 +30,24 @@ const newCoder =
                 </article>
             `
   ;
+  /* const buttonDelete = document.querySelector(".deleteCoder");
+  buttonDelete.addEventListener("click", */
   console.log(coder)
-  deleteButton(coder)
-
-  
-
-  
+  console.log(buttonDelete)
 }
 
+function deleteCoder(coder) {
+  const index = listaCoders.indexOf(coder);
+  listaCoders.splice(listaCoders.indexOf(coder), 1);
+  console.log(listaCoders)
+}
 
+deleteCoder("Quim")
 
+function selectCoder() {
+    let coderSelected = Math.floor(Math.random() * listaCoders.length)
+    
+    console.log(coderSelected)
+}
 
-console.log(listaCoders);
-
-// addCoder();
-
-console.log(listaCoders);
-// document
-//   .querySelector("#addButton")
-//   .addEventListener("click", agregarParticipante);
-
-// function addCoders() {
-//   let coder = document.querySelector("#addName").value;
-//   if (coder != "") {
-//     agregarParticipante(coder);
-//   }
-
-//   console.log(coder);
-// }
-
-// function agregarParticipante(coder) {
-//   document.querySelector("#coderList").innerHTML +=
-//     `
-//         <article id="` +
-//     coder +
-//     ` " class="participante">
-//             <span>` +
-//     coder +
-//     ` </span>
-//         </article>
-//     `;
-//   agregarParticipanteLista(coder);
-// }
-
-// function agregarParticipanteLista(coder) {
-//   listaCoders.push(coder);
-// }
-// addCoders();
+selectCoder() 
