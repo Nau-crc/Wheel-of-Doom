@@ -1,8 +1,7 @@
 "use strict";
 
-// let agregarParticipanteLista = [];
+let listaCoders = [];
 
-let listaCoders = ["Isma", "Carmen", "Quim", "Vanessa", "Laura"];
 
 const addButton = document.querySelector("#addButton");
 
@@ -11,15 +10,26 @@ addButton.addEventListener("click", addCoder);
 function addCoder() {
   const newCoder = document.querySelector("#addName").value;
   listaCoders.push(newCoder);
-  console.log(listaCoders);
+  console.log(newCoder);
+  agregarParticipante(newCoder);
+  deleteButton();
 }
 
-function agregarParticipante() {
+
+function offCoder(coder) {
+  listaCoders.splice(listaCoders.indexOf(coder), 1);
+
+}
+function deleteButton (coder){
+  let deleteCoder = document.querySelector(".deleteCoder");
+  deleteCoder.addEventListener("click", offCoder)
+}
+
+function agregarParticipante(coder) {
   const article = document.querySelector("#coderList");
 
-  listaCoders.forEach(
-    (coder) =>
-      (article.innerHTML +=
+const newCoder = 
+      article.innerHTML +=
         `
                 <article id="` +
         coder +
@@ -27,10 +37,20 @@ function agregarParticipante() {
                     <span>` +
         coder +
         ` </span>
+        <button class="deleteCoder"> - </button>
                 </article>
-            `)
-  );
+            `
+  ;
+  console.log(coder)
+  deleteButton(coder)
+
+  
+
+  
 }
+
+
+
 
 console.log(listaCoders);
 
