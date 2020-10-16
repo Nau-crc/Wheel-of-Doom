@@ -17,18 +17,18 @@ function addCoder() {
 function agregarParticipante(coder) {
   const article = document.querySelector("#coderList");
 
-  const newCoder = 
-      article.innerHTML +=
-        `
-                <article id="` +
-        coder +
-        ` " class="participante">
-                    <span>` +
-        coder +
-        ` </span>
-        <button class="deleteCoder"> - </button>
-                </article>
-            `
+
+article.innerHTML +=
+  `
+          <article id="` +
+  coder +
+  ` " class="participante">
+              <span>` +
+  coder +
+  ` </span>
+  <button class="deleteCoder"> - </button>
+          </article>
+      `
   ;
   /* const buttonDelete = document.querySelector(".deleteCoder");
   buttonDelete.addEventListener("click", */
