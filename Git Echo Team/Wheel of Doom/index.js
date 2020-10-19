@@ -16,8 +16,6 @@ function addCoder() {
 
 function agregarParticipante(coder) {
   const article = document.querySelector("#coderList");
-
-
 article.innerHTML +=
   `
           <article id="` +

@@ -2,15 +2,20 @@
 
 const startButton = document.querySelector("#startButton");
 const resetButton = document.querySelector("#resetButton");
+const addButton = document.querySelector("#addButton");
+const removeButton = document.querySelector("#removeButton");
 
 startButton.addEventListener("click", startWheel);
 resetButton.addEventListener("click", reset);
+addButton.addEventListener("click", addCoder);
+removeButton.addEventListener("click", removeCoder);
+
 
 let listaCoders = [
   { name: "Vanessa", status: "alive" },
   { name: "Quim", status: "alive" },
-  { name: "Carmen", status: "alive" },
-  { name: "Laura", status: "alive" },
+  { name: "Carmen", status: "alive"},
+  { name: "Laura", status: "alive"},
   { name: "Isma", status: "alive" },
 ];
 
@@ -68,6 +73,7 @@ function createCoderArticle(coder) {
   coderArticle.setAttribute("id", `${coder.name}`);
   coderArticle.appendChild(coderName);
   coderListSection.appendChild(coderArticle);
+
 }
 
 function reset() {
@@ -77,4 +83,27 @@ function reset() {
   });
   showResultMessage("");
 }
+
+function addCoder() {
+  const coderName = document.querySelector("#addCoder").value;
+  const coder = {
+    name:coderName,
+    status:"alive"
+  }
+  listaCoders.push(coder);
+  createCoderArticle(coder);
+}
+
+function removeCoder(){
+  const coderName = document.querySelector("#addCoder").value;
+  listaCoders.forEach(coder => {
+    if(coder.name === coderName) {
+      listaCoders.splice(coder, 1);
+    }
+  })
+  console.log(listaCoders)
+}
+
+
+
 window.onload = showCoders();
