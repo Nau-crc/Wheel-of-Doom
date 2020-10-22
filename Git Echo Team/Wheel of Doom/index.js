@@ -3,20 +3,13 @@
 const startButton = document.querySelector("#startButton");
 const resetButton = document.querySelector("#resetButton");
 const addButton = document.querySelector("#addButton");
-const removeButton = document.querySelector("#removeButton");
 
 startButton.addEventListener("click", startWheel);
 resetButton.addEventListener("click", reset);
 addButton.addEventListener("click", addCoder);
-removeButton.addEventListener("click", removeCoder);
-
 
 let listaCoders = [
-  { name: "Vanessa", status: "alive" },
-  { name: "Quim", status: "alive" },
-  { name: "Carmen", status: "alive"},
-  { name: "Laura", status: "alive"},
-  { name: "Isma", status: "alive" },
+  
 ];
 
 function startWheel() {
@@ -86,6 +79,9 @@ function reset() {
 
 function addCoder() {
   const coderName = document.querySelector("#addCoder").value;
+  if(!validateInput(coderName)) {
+    return
+  };
   const coder = {
     name:coderName,
     status:"alive"
@@ -94,16 +90,23 @@ function addCoder() {
   createCoderArticle(coder);
 }
 
-function removeCoder(){
-  const coderName = document.querySelector("#addCoder").value;
-  listaCoders.forEach(coder => {
-    if(coder.name === coderName) {
-      listaCoders.splice(coder, 1);
-    }
-  })
-  console.log(listaCoders)
+
+function validateInput (value) {
+  if(value === "" || value === undefined) {
+    showFeedbackMessage()
+    return
+  }
+  return true
 }
 
+function showFeedbackMessage() {
+  const input = document.querySelector(".add-coders");
+  const message = document.createElement("p");
+  message.innerHTML = "Please insert name";
+  message.setAttribute("id", "feedback-message")
+  input.appendChild(message)
+}
+ 
 const audio = document.getElementById("myAudio"); 
               
   function playAudio() { 

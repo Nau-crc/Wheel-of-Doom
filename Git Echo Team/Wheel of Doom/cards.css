@@ -18,14 +18,25 @@
   text-shadow: 1px 1px darkgray;
 }
 
+#coderList {
+  text-align: center;
+  font-size: medium;
+  font-weight: 200;
+  font-family: Montserrat, helvetica;
+}
+
 #coderList article {
+<<<<<<< Updated upstream
   display: flex;
   justify-content: center;
+=======
+>>>>>>> Stashed changes
   height: 100px;
   width: 100px;
   padding: 50px;
   margin: 20px;
   border-radius: 15px;
+<<<<<<< Updated upstream
   background-color: transparent;
 }
 
@@ -34,11 +45,23 @@
   background-image: url("./img/alive.png");
   background-size: cover;
   color: rgb(68, 68, 68);
+=======
+  justify-content: center;
+  display: flex;
+  background-color: transparent;
+}
+.alive {
+  box-shadow: 0px 4px 8px yellowgreen;
+  background-image: url("./img/alive.png");
+>>>>>>> Stashed changes
 }
 
 .dead {
   box-shadow: 0px 4px 8px tomato;
   background-image: url("./img/dead.jpg");
+<<<<<<< Updated upstream
   background-size: cover;
   color: rgb(0, 0, 0);
+=======
+>>>>>>> Stashed changes
 }
