@@ -1,45 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 #coderList {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: flex-end;
-    font-size: medium;
-    font-weight: 200;
-    font-family: Montserrat, helvetica;
-    perspective: 1000px; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  font-size: medium;
+  text-align: center;
+  font-weight: 200;
+  font-family: Montserrat, helvetica;
+  perspective: 1000px;
 }
 
 #coderList p {
-    align-self: flex-end;
-    font-size: 30px;
-    text-shadow: 1px 1px darkgray;
+  align-self: flex-end;
+  font-size: 30px;
+  text-shadow: 1px 1px darkgray;
 }
 
 #coderList article {
-    height: 100px;
-    width: 100px; 
-    padding: 50px;
-    margin: 20px;
-    border-radius: 15px;
-    justify-content: center;
-    display: flex; 
-    background-color: transparent; 
-} 
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: transparent;
+}
 
 .alive {
-    box-shadow: 0px 4px 8px yellowgreen;
-    background-image: url("./img/alive.png");
-    background-size: cover;
-    color: rgb(68, 68, 68);
+  box-shadow: 0px 4px 8px yellowgreen;
+  background-image: url("./img/alive.png");
+  background-size: cover;
+  color: rgb(68, 68, 68);
 }
 
 .dead {
-    box-shadow: 0px 4px 8px tomato; 
-    background-image: url("./img/dead.jpg");
-    background-size: cover;
-    color: rgb(0, 0, 0);
-} 
-
+  box-shadow: 0px 4px 8px tomato;
+  background-image: url("./img/dead.jpg");
+  background-size: cover;
+  color: rgb(0, 0, 0);
+}

@@ -104,6 +104,14 @@ function removeCoder(){
   console.log(listaCoders)
 }
 
-
+const audio = document.getElementById("myAudio"); 
+              
+  function playAudio() { 
+    audio.play(); 
+  } 
+  
+  function pauseAudio() { 
+    audio.pause(); 
+  } 
 
 window.onload = showCoders();
