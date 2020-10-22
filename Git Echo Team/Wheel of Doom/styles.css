@@ -32,7 +32,7 @@ h4{
 }
 
 .button{
-  margin: 20px;
+  margin: 15px;
   background-color: #17851f; 
   border: none;
   border-radius: 5px;
@@ -42,6 +42,13 @@ h4{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+#addButton{
+  padding: 15px 20px;
+}
+#removeButton{
+  padding: 15px 20px;
 }
 
 #result-display{
@@ -54,4 +61,8 @@ h4{
   font-weight: 600;
   font-family: Orbitron;
   padding: 10px;
+}
+
+#addCoder{
+  margin-left: 40%;
 }
