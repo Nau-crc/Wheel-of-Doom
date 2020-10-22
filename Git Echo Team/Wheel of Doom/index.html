@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="cards.css">
+        <link rel="stylesheet" href="styles.css">
         <title>Document</title>
     </head>
     <body>
@@ -17,10 +18,10 @@
                 <button id="startButton" class="button" onclick="playAudio()">Start</button>
                 <button id="resetButton" class="button" onclick="pauseAudio()">Reset</button>
             </section>
-            <section>
+            <section">
                 <input id="addCoder" type="text">
                 <button id="addButton" class="button">+</button>
-                <button id="removeButton" class="button">-</button>
+                <button id="removeButton" class="button">X<span onclick="this.parentElement.style.display='none'"></span></button>&times;</span>
             </section>
             <section id="result-display">
                 <div>
@@ -29,7 +30,7 @@
             </section>
             <section id="coderList">
                 
-
+      
 
             </section>
 

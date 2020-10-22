@@ -55,19 +55,3 @@ h4{
   font-family: Orbitron;
   padding: 10px;
 }
-#coderList{
-  text-align: center;
-  font-size: medium;
-  font-weight: 200;
-  font-family: Montserrat, helvetica;
-  
-}
-
-
-.dead {
-  color: rgb(15, 10, 10);
-}
-
-.alive {
-  color: rgb(219, 215, 215);
-}

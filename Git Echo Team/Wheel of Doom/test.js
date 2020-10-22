@@ -67,7 +67,7 @@ function showCoders() {
 function createCoderArticle(coder) {
   const coderListSection = document.querySelector("#coderList");
   const coderArticle = document.createElement("article");
-  const coderName = document.createElement("span", `${coder.name}`);
+  const coderName = document.createElement("p", `${coder.name}`);
   coderName.innerHTML += `${coder.name}`;
   coderArticle.setAttribute("class", `${coder.status}`);
   coderArticle.setAttribute("id", `${coder.name}`);
