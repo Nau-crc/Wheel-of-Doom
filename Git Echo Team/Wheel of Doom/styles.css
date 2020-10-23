@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
-body{
+body {
   background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Dark-spots-texture-background-1920x1080.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ h1 {
   margin-top: 70px;
 }
 
-h4{
+h4 {
   color: antiquewhite;
   text-align: center;
   font-family: helvetica;
@@ -23,17 +23,15 @@ h4{
 
 .calavera {
   display: block;
-  margin: auto
-  
-  
+  margin: auto;
 }
-.botones{
+.botones {
   text-align: center;
 }
 
-.button{
+.button {
   margin: 15px;
-  background-color: #17851f; 
+  background-color: #17851f;
   border: none;
   border-radius: 5px;
   color: white;
@@ -44,18 +42,18 @@ h4{
   font-size: 16px;
 }
 
-#addButton{
+#addButton {
   padding: 15px 20px;
 }
-#removeButton{
+#removeButton {
   padding: 15px 20px;
 }
 
-#result-display{
+#result-display {
   text-align: center;
 }
 
-#display-message{
+#display-message {
   color: antiquewhite;
   font-size: x-large;
   font-weight: 600;
@@ -63,6 +61,14 @@ h4{
   padding: 10px;
 }
 
-#addCoder{
-  margin-left: 40%;
+.add-coders {
+  text-align: center;
+}
+
+#feedback-message {
+  color: red;
+  font-size: x-large;
+  font-weight: 600;
+  font-family: Orbitron;
+  padding: 10px;
 }

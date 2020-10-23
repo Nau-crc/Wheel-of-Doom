@@ -98,11 +98,7 @@ function validateInput(value) {
 }
 
 function showFeedbackMessage() {
-  const input = document.querySelector(".add-coders");
-  const message = document.createElement("p");
-  message.innerHTML = "Please insert name";
-  message.setAttribute("id", "feedback-message");
-  input.appendChild(message);
+  window.alert("please insert name")
 }
 
 const audio = document.getElementById("myAudio");
