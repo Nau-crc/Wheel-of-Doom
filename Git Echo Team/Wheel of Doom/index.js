@@ -8,9 +8,7 @@ startButton.addEventListener("click", startWheel);
 resetButton.addEventListener("click", reset);
 addButton.addEventListener("click", addCoder);
 
-let listaCoders = [
-  
-];
+let listaCoders = [];
 
 function startWheel() {
   const listCodersAlive = [];
@@ -66,7 +64,6 @@ function createCoderArticle(coder) {
   coderArticle.setAttribute("id", `${coder.name}`);
   coderArticle.appendChild(coderName);
   coderListSection.appendChild(coderArticle);
-
 }
 
 function reset() {
@@ -78,43 +75,44 @@ function reset() {
 }
 
 function addCoder() {
-  const coderName = document.querySelector("#addCoder").value;
-  if(!validateInput(coderName)) {
-    return
-  };
-  const coder = {
-    name:coderName,
-    status:"alive"
+  let coderNameInput = document.querySelector("#addCoder");
+  const coderName = coderNameInput.value;
+  if (!validateInput(coderName)) {
+    return;
   }
+  const coder = {
+    name: coderName,
+    status: "alive",
+  };
   listaCoders.push(coder);
   createCoderArticle(coder);
+  coderNameInput.value = "";
 }
 
-
-function validateInput (value) {
-  if(value === "" || value === undefined) {
-    showFeedbackMessage()
-    return
+function validateInput(value) {
+  if (value === "" || value === undefined) {
+    showFeedbackMessage();
+    return;
   }
-  return true
+  return true;
 }
 
 function showFeedbackMessage() {
   const input = document.querySelector(".add-coders");
   const message = document.createElement("p");
   message.innerHTML = "Please insert name";
-  message.setAttribute("id", "feedback-message")
-  input.appendChild(message)
+  message.setAttribute("id", "feedback-message");
+  input.appendChild(message);
 }
- 
-const audio = document.getElementById("myAudio"); 
-              
-  function playAudio() { 
-    audio.play(); 
-  } 
-  
-  function pauseAudio() { 
-    audio.pause(); 
-  } 
+
+const audio = document.getElementById("myAudio");
+
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
 
 window.onload = showCoders();
